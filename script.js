@@ -76,15 +76,14 @@ function renderTable() {
         let improvementClass = '';
         if (player.test1 !== null && player.test2 !== null) {
             const diff = player.test2 - player.test1;
-            const percent = ((diff / player.test1) * 100).toFixed(1);
             if (diff > 0) {
-                improvement = `+${diff.toFixed(1)} (+${percent}%)`;
+                improvement = `+${diff.toFixed(1)}`;
                 improvementClass = 'improvement-positive';
             } else if (diff < 0) {
-                improvement = `${diff.toFixed(1)} (${percent}%)`;
+                improvement = `${diff.toFixed(1)}`;
                 improvementClass = 'improvement-negative';
             } else {
-                improvement = '0.0 (0%)';
+                improvement = '0.0';
                 improvementClass = 'improvement-neutral';
             }
         } else {
@@ -141,18 +140,12 @@ function attachEventListeners() {
 
     document.getElementById('editMode').addEventListener('click', function() {
         const editColumns = document.querySelectorAll('.edit-column');
-        const addButton = document.getElementById('addPlayer');
         const isHidden = editColumns[0].classList.contains('hidden');
 
         editColumns.forEach(col => col.classList.toggle('hidden'));
-        addButton.classList.toggle('hidden');
 
         this.textContent = isHidden ? 'Exit Edit Mode' : 'Edit Scores';
         this.classList.toggle('active');
-    });
-
-    document.getElementById('addPlayer').addEventListener('click', function() {
-        showEditForm();
     });
 
     document.getElementById('scoreForm').addEventListener('submit', function(e) {
