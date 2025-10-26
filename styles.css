@@ -1,9 +1,10 @@
 /* Wimbledonian Warriors Colors */
 :root {
+    --bottle-green: #0B4F3C;
     --maroon: #800020;
-    --cambridge-blue: #A3C1AD;
-    --navy: #1a2332;
-    --light-blue: #b8d8e8;
+    --gold: #D4AF37;
+    --light-green: #A8D5BA;
+    --light-gold: #F4E5C3;
     --white: #ffffff;
     --light-gray: #f5f5f5;
     --gray: #e0e0e0;
@@ -20,10 +21,10 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--maroon) 100%);
+    background: linear-gradient(135deg, var(--bottle-green) 0%, var(--maroon) 100%);
     min-height: 100vh;
     padding: 20px;
-    color: var(--navy);
+    color: var(--bottle-green);
 }
 
 .container {
@@ -37,7 +38,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--maroon) 0%, var(--navy) 100%);
+    background: linear-gradient(135deg, var(--bottle-green) 0%, var(--maroon) 100%);
     color: var(--white);
     padding: 30px;
     text-align: center;
@@ -51,7 +52,7 @@ header::after {
     left: 0;
     right: 0;
     height: 5px;
-    background: var(--cambridge-blue);
+    background: var(--gold);
 }
 
 header h1 {
@@ -63,7 +64,7 @@ header h1 {
 header h2 {
     font-size: 1.5em;
     font-weight: 300;
-    color: var(--light-blue);
+    color: var(--light-gold);
 }
 
 /* Controls */
@@ -73,7 +74,7 @@ header h2 {
     padding: 20px 30px;
     background: var(--light-gray);
     flex-wrap: wrap;
-    border-bottom: 3px solid var(--cambridge-blue);
+    border-bottom: 3px solid var(--gold);
 }
 
 .btn {
@@ -100,23 +101,23 @@ header h2 {
 }
 
 .btn-primary.active {
-    background: var(--navy);
+    background: var(--bottle-green);
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
-    background: var(--cambridge-blue);
-    color: var(--navy);
+    background: var(--gold);
+    color: var(--bottle-green);
 }
 
 .btn-secondary:hover {
-    background: #8fb199;
+    background: #C19B2B;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(163, 193, 173, 0.3);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
 }
 
 .btn-secondary.active {
-    background: var(--navy);
+    background: var(--bottle-green);
     color: var(--white);
 }
 
@@ -135,11 +136,11 @@ header h2 {
 
 /* Info Panel */
 .info-panel {
-    background: linear-gradient(135deg, var(--light-blue) 0%, var(--cambridge-blue) 100%);
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--light-green) 100%);
     padding: 30px;
     margin: 20px 30px;
     border-radius: 10px;
-    border: 3px solid var(--maroon);
+    border: 3px solid var(--bottle-green);
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -149,15 +150,15 @@ header h2 {
 }
 
 .info-panel h3 {
-    color: var(--maroon);
+    color: var(--bottle-green);
     margin-bottom: 15px;
     font-size: 1.8em;
-    border-bottom: 3px solid var(--maroon);
+    border-bottom: 3px solid var(--bottle-green);
     padding-bottom: 10px;
 }
 
 .info-panel h4 {
-    color: var(--navy);
+    color: var(--maroon);
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.3em;
@@ -166,7 +167,7 @@ header h2 {
 .info-panel p {
     margin-bottom: 15px;
     line-height: 1.6;
-    color: var(--navy);
+    color: var(--bottle-green);
 }
 
 .info-panel ul {
@@ -177,7 +178,7 @@ header h2 {
 .info-panel li {
     margin-bottom: 10px;
     line-height: 1.6;
-    color: var(--navy);
+    color: var(--bottle-green);
 }
 
 .info-panel strong {
@@ -210,7 +211,7 @@ header h2 {
 }
 
 .close-btn:hover {
-    background: var(--navy);
+    background: var(--bottle-green);
     transform: rotate(90deg);
 }
 
@@ -228,7 +229,7 @@ header h2 {
     padding: 10px 20px;
     border-radius: 8px;
     background: var(--white);
-    border: 2px solid var(--cambridge-blue);
+    border: 2px solid var(--gold);
     font-size: 1em;
 }
 
@@ -244,11 +245,11 @@ header h2 {
 }
 
 .scores-container h3 {
-    color: var(--maroon);
+    color: var(--bottle-green);
     margin-bottom: 20px;
     font-size: 1.8em;
     text-align: center;
-    border-bottom: 3px solid var(--cambridge-blue);
+    border-bottom: 3px solid var(--gold);
     padding-bottom: 10px;
 }
 
@@ -260,7 +261,7 @@ table {
 }
 
 thead {
-    background: linear-gradient(135deg, var(--maroon) 0%, var(--navy) 100%);
+    background: linear-gradient(135deg, var(--bottle-green) 0%, var(--maroon) 100%);
     color: var(--white);
 }
 
@@ -279,7 +280,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background: var(--light-blue);
+    background: var(--light-green);
     transform: scale(1.01);
 }
 
@@ -288,7 +289,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:nth-child(even):hover {
-    background: var(--light-blue);
+    background: var(--light-green);
 }
 
 tbody td {
@@ -296,17 +297,17 @@ tbody td {
 }
 
 .coach-row {
-    border-top: 3px solid var(--cambridge-blue);
+    border-top: 3px solid var(--gold);
     background: #e8f4f8 !important;
 }
 
 .coach-row:hover {
-    background: var(--light-blue) !important;
+    background: var(--light-green) !important;
 }
 
 .coach-name {
     font-style: italic;
-    color: var(--navy);
+    color: var(--bottle-green);
 }
 
 .improvement-positive {
@@ -347,12 +348,12 @@ tbody td {
 }
 
 .btn-edit {
-    background: var(--cambridge-blue);
-    color: var(--navy);
+    background: var(--gold);
+    color: var(--bottle-green);
 }
 
 .btn-edit:hover {
-    background: var(--navy);
+    background: var(--bottle-green);
     color: var(--white);
 }
 
@@ -392,7 +393,7 @@ tbody td {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
-    color: var(--navy);
+    color: var(--bottle-green);
 }
 
 .form-group input {
@@ -417,7 +418,7 @@ tbody td {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--maroon) 100%);
+    background: linear-gradient(135deg, var(--bottle-green) 0%, var(--maroon) 100%);
     color: var(--white);
     padding: 25px;
     text-align: center;
@@ -430,7 +431,7 @@ footer p {
 
 .motto {
     font-style: italic;
-    color: var(--light-blue);
+    color: var(--light-gold);
     margin-top: 10px;
 }
 
