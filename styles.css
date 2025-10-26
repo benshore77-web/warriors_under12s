@@ -1,0 +1,500 @@
+/* Wimbledonian Warriors Colors */
+:root {
+    --maroon: #800020;
+    --cambridge-blue: #A3C1AD;
+    --navy: #1a2332;
+    --light-blue: #b8d8e8;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --gray: #e0e0e0;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--maroon) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--navy);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--maroon) 0%, var(--navy) 100%);
+    color: var(--white);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--cambridge-blue);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--light-blue);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+    padding: 20px 30px;
+    background: var(--light-gray);
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--cambridge-blue);
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--maroon);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #660019;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(128, 0, 32, 0.3);
+}
+
+.btn-primary.active {
+    background: var(--navy);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background: var(--cambridge-blue);
+    color: var(--navy);
+}
+
+.btn-secondary:hover {
+    background: #8fb199;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(163, 193, 173, 0.3);
+}
+
+.btn-secondary.active {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.btn-add {
+    background: var(--success);
+    color: var(--white);
+    margin: 20px 30px;
+    font-size: 1.1em;
+}
+
+.btn-add:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Info Panel */
+.info-panel {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--cambridge-blue) 100%);
+    padding: 30px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    border: 3px solid var(--maroon);
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-panel.hidden {
+    display: none;
+}
+
+.info-panel h3 {
+    color: var(--maroon);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 3px solid var(--maroon);
+    padding-bottom: 10px;
+}
+
+.info-panel h4 {
+    color: var(--navy);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.info-panel p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--navy);
+}
+
+.info-panel ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.info-panel li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--navy);
+}
+
+.info-panel strong {
+    color: var(--maroon);
+}
+
+.target-info {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid var(--maroon);
+    font-size: 1.1em;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--maroon);
+    color: var(--white);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: var(--navy);
+    transform: rotate(90deg);
+}
+
+/* Test Info */
+.test-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+    background: linear-gradient(to right, var(--light-gray), var(--white), var(--light-gray));
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.test-date, .next-test {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 2px solid var(--cambridge-blue);
+    font-size: 1em;
+}
+
+.next-test {
+    border-color: var(--maroon);
+    font-weight: 600;
+    color: var(--maroon);
+}
+
+/* Scores Container */
+.scores-container {
+    padding: 30px;
+}
+
+.scores-container h3 {
+    color: var(--maroon);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    border-bottom: 3px solid var(--cambridge-blue);
+    padding-bottom: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--maroon) 0%, var(--navy) 100%);
+    color: var(--white);
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--gray);
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: var(--light-blue);
+    transform: scale(1.01);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--light-gray);
+}
+
+tbody tr:nth-child(even):hover {
+    background: var(--light-blue);
+}
+
+tbody td {
+    padding: 15px;
+}
+
+.coach-row {
+    border-top: 3px solid var(--cambridge-blue);
+    background: #e8f4f8 !important;
+}
+
+.coach-row:hover {
+    background: var(--light-blue) !important;
+}
+
+.coach-name {
+    font-style: italic;
+    color: var(--navy);
+}
+
+.improvement-positive {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.improvement-negative {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.improvement-neutral {
+    color: var(--warning);
+}
+
+.target-reached {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.target-reached::after {
+    content: ' ✓';
+}
+
+.edit-column.hidden {
+    display: none;
+}
+
+.btn-edit, .btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: var(--cambridge-blue);
+    color: var(--navy);
+}
+
+.btn-edit:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.btn-delete {
+    background: var(--danger);
+    color: var(--white);
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+/* Edit Form */
+.edit-form {
+    background: var(--light-gray);
+    padding: 30px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    border: 3px solid var(--maroon);
+}
+
+.edit-form.hidden {
+    display: none;
+}
+
+.edit-form h3 {
+    color: var(--maroon);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--maroon);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--maroon) 100%);
+    color: var(--white);
+    padding: 25px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.motto {
+    font-style: italic;
+    color: var(--light-blue);
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    thead th, tbody td {
+        padding: 10px 5px;
+    }
+
+    .test-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    .scores-container {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    .info-panel {
+        padding: 20px;
+    }
+}

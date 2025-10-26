@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWW U12s Bleep Test Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Old Wimbledonian Warriors</h1>
+            <h2>Under 12s Bleep Test Tracker</h2>
+        </header>
+
+        <div class="controls">
+            <button id="sortAlpha" class="btn btn-primary active">Sort Alphabetically</button>
+            <button id="sortScore" class="btn btn-primary">Sort by Best Score</button>
+            <button id="toggleInfo" class="btn btn-secondary">About the Bleep Test</button>
+            <button id="editMode" class="btn btn-secondary">Edit Scores</button>
+        </div>
+
+        <div id="infoPanel" class="info-panel hidden">
+            <button class="close-btn" id="closeInfo">&times;</button>
+            <h3>What is the Bleep Test?</h3>
+            <p>The Multi-Stage Fitness Test (MSFT), also known as the bleep test, is a progressive cardiovascular endurance test that measures aerobic capacity (VO2 max).</p>
+
+            <h4>Met Police 15m Version</h4>
+            <p>The test we use is the 15-metre version employed by the Metropolitan Police for fitness assessments:</p>
+            <ul>
+                <li><strong>Distance:</strong> Players run back and forth between two lines 15 metres apart</li>
+                <li><strong>Progression:</strong> The test starts at a slow pace and gradually increases in speed</li>
+                <li><strong>Levels & Shuttles:</strong> Each level consists of a set number of shuttles (runs between the lines)</li>
+                <li><strong>Audio Cues:</strong> A beep signals when to reach the next line - you must reach it before the beep</li>
+                <li><strong>Completion:</strong> The test continues until you can no longer keep pace with the beeps</li>
+            </ul>
+
+            <h4>Why is it Useful?</h4>
+            <ul>
+                <li><strong>Measures Cardiovascular Fitness:</strong> Tests your heart and lungs' ability to supply oxygen during intense exercise</li>
+                <li><strong>Rugby-Specific:</strong> Mimics the stop-start nature of rugby with short sprints and quick turns</li>
+                <li><strong>Tracks Progress:</strong> Monthly testing shows improvement in fitness levels over time</li>
+                <li><strong>Motivation:</strong> Provides clear, measurable goals to work towards</li>
+                <li><strong>Team Building:</strong> Encourages players to push themselves alongside teammates</li>
+            </ul>
+
+            <p class="target-info"><strong>Target:</strong> Each player aims for a 10% improvement each month! 💪</p>
+        </div>
+
+        <div class="test-info">
+            <div class="test-date">
+                <strong>Test 1:</strong> 21st September 2024
+            </div>
+            <div class="test-date">
+                <strong>Test 2:</strong> 19th October 2024
+            </div>
+            <div class="next-test">
+                <strong>Next Test:</strong> Mid-November 2024
+            </div>
+        </div>
+
+        <div class="scores-container">
+            <h3>Player Scores</h3>
+            <table id="scoresTable">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Test 1 (Sept 21)</th>
+                        <th>Test 2 (Oct 19)</th>
+                        <th>Improvement</th>
+                        <th>Target</th>
+                        <th class="edit-column hidden">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="scoresBody">
+                    <!-- Scores will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="editForm" class="edit-form hidden">
+            <h3>Edit Player Scores</h3>
+            <form id="scoreForm">
+                <div class="form-group">
+                    <label for="playerName">Player Name:</label>
+                    <input type="text" id="playerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="test1Score">Test 1 Score:</label>
+                    <input type="number" id="test1Score" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="test2Score">Test 2 Score:</label>
+                    <input type="number" id="test2Score" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="targetScore">Target Score:</label>
+                    <input type="number" id="targetScore" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <input type="text" id="notes" placeholder="e.g., dead leg, first test">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <button id="addPlayer" class="btn btn-add hidden">+ Add New Player</button>
+
+        <footer>
+            <p>Target: 10% improvement for everyone! 💪</p>
+            <p class="motto">Warriors spirit, every training session!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
