@@ -31,7 +31,6 @@ A web application to track fitness scores for the Old Wimbledonian Warriors Unde
 - **Red** indicates a decrease in score
 - **Yellow** indicates no change
 - Target scores with a **✓** mark mean the player has reached or exceeded their goal
-- The 🔥 and 👊👏 emojis celebrate exceptional improvements
 
 ### Editing Scores
 
@@ -43,7 +42,7 @@ A web application to track fitness scores for the Old Wimbledonian Warriors Unde
    - **Test 1 Score**: Optional (leave blank if not available)
    - **Test 2 Score**: Optional
    - **Target Score**: Optional
-   - **Notes**: Optional (e.g., "dead leg", emojis)
+   - **Notes**: Optional (e.g., "dead leg")
 5. Click **"Save"** to save changes or **"Cancel"** to discard
 6. Click **"Delete"** to remove a player (confirmation required)
 7. Click **"Exit Edit Mode"** when finished
@@ -132,6 +131,6 @@ For issues or questions, contact the team coach or administrator.
 
 ---
 
-**Target: 10% improvement for everyone! 💪**
+**Target: 10% improvement for everyone!**
 
 *Warriors spirit, every training session!*
