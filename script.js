@@ -98,12 +98,23 @@ function renderTable() {
             }
         }
 
+        // Calculate VO2 Max from Test 2 score
+        // Formula: VO2 max = 20.6 + 3 × Level
+        let vo2Max = '';
+        if (player.test2 !== null) {
+            const vo2Value = 20.6 + (3 * player.test2);
+            vo2Max = vo2Value.toFixed(1);
+        } else {
+            vo2Max = '-';
+        }
+
         row.innerHTML = `
             <td class="${player.isCoach ? 'coach-name' : ''}">${player.name}${player.isCoach ? ' (Coach)' : ''}</td>
             <td>${player.test1 !== null ? player.test1.toFixed(1) : '-'}</td>
             <td>${player.test2 !== null ? player.test2.toFixed(1) : '-'} ${player.notes}</td>
             <td class="${improvementClass}">${improvement}</td>
             <td class="${targetClass}">${player.target !== null ? player.target.toFixed(1) : '-'}</td>
+            <td>${vo2Max}</td>
             <td class="edit-column hidden">
                 <button class="btn-edit" onclick="editPlayer(${players.indexOf(player)})">Edit</button>
                 <button class="btn-delete" onclick="deletePlayer(${players.indexOf(player)})">Delete</button>
