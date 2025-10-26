@@ -3,16 +3,18 @@ let players = [
     { name: "Alexander", test1: 5.8, test2: 9.0, target: 9.9, notes: "", isCoach: false },
     { name: "Arda", test1: null, test2: 7.3, target: 8.0, notes: "", isCoach: false },
     { name: "Cian", test1: null, test2: 8.7, target: 9.6, notes: "", isCoach: false },
+    { name: "Coen", test1: 8.0, test2: 8.2, target: 9.0, notes: "", isCoach: false },
+    { name: "Cooper", test1: 5.1, test2: 6.2, target: 6.8, notes: "", isCoach: false },
     { name: "Finlay", test1: 6.3, test2: 6.3, target: 6.9, notes: "(dead leg)", isCoach: false },
     { name: "George", test1: null, test2: 10.7, target: 11.8, notes: "", isCoach: false },
     { name: "Harry", test1: 3.0, test2: 5.0, target: 5.5, notes: "", isCoach: false },
     { name: "Hugo", test1: 4.2, test2: 6.0, target: 6.6, notes: "", isCoach: false },
-    { name: "Coen", test1: 8.0, test2: 8.2, target: 9.0, notes: "", isCoach: false },
     { name: "Lachlan", test1: 6.5, test2: 9.5, target: 10.5, notes: "", isCoach: false },
     { name: "Magnus", test1: 5.6, test2: 6.7, target: 7.4, notes: "", isCoach: false },
     { name: "Ollie C", test1: 5.2, test2: 9.1, target: 10.0, notes: "", isCoach: false },
     { name: "Quin", test1: 5.4, test2: 8.7, target: 9.6, notes: "", isCoach: false },
     { name: "Angus", test1: null, test2: 6.0, target: 6.6, notes: "", isCoach: true },
+    { name: "Brett", test1: null, test2: 6.0, target: 6.6, notes: "", isCoach: true },
     { name: "Rich", test1: null, test2: 10.7, target: 11.8, notes: "", isCoach: true }
 ];
 
