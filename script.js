@@ -13,6 +13,7 @@ let players = [
     { name: "Magnus", test1: 5.6, test2: 6.7, target: 7.4, notes: "", isCoach: false },
     { name: "Ollie C", test1: 5.2, test2: 9.1, target: 10.0, notes: "", isCoach: false },
     { name: "Quin", test1: 5.4, test2: 8.7, target: 9.6, notes: "", isCoach: false },
+    { name: "Sam", test1: null, test2: 9.3, target: 10.2, notes: "", isCoach: false },
     { name: "Angus", test1: null, test2: 6.0, target: 6.6, notes: "", isCoach: true },
     { name: "Brett", test1: null, test2: 6.0, target: 6.6, notes: "", isCoach: true },
     { name: "Rich", test1: null, test2: 10.7, target: 11.8, notes: "", isCoach: true }
